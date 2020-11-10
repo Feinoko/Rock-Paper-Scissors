@@ -1,0 +1,31 @@
+#launch {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25;
+   padding: 15px;
+   color: brown;
+   background-color: rgba(165, 42, 42, 0.3);
+   display: inline-block;
+   border: solid 2px rgba(165, 42, 42, 1);
+   text-align: center;
+   border-radius: 10px;
+}
+
+#welcome
+{
+   font-weight: bold;
+   color: brown;
+}
+
+#scoreboard {
+   color: transparent;
+}
+
+.visible {
+   color: black;
+}
+
+#YouWin {
+   font-weight: bolder;
+   color: brown;
+   font-size: 2rem;
+}
