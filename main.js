@@ -8,25 +8,28 @@ let pScore = 0; // tracks player score
 let rScore = 0; // tracks robot score
 
 const playButton = document.getElementById('launch');
-const NumberOfRounds = document.getElementById('rounds');
-console.log(NumberOfRounds.value); 
+const howManyRounds = document.getElementById('rounds');
+console.log(howManyRounds.value); 
 
 
-function insertFunction() {
+function insertFunction() { // called when launching the game
 
-   let nrv = NumberOfRounds.value; // tracks number of rounds selected for a game
+   let nrv = howManyRounds.value; // tracks number of rounds selected for a game
    if (round > nrv) {
       return;
    }
 
-   console.log(round);
+   console.log(round); //debug
 
+   // Grabbing elements in const for code cleanliness
    const rock = document.getElementById('rock');
    const paper = document.getElementById('paper');
    const scissors = document.getElementById('scissors');
 
+   // defining an array for robot's choice
    let robot = ['Rock', 'Paper', 'Scissors'];
 
+   // function defined as expression and stored in variable whose value will be the string of the gesture selected by the player
    let pChoice = () => {
       if (rock.checked) {
          return 'Rock';
@@ -35,14 +38,13 @@ function insertFunction() {
       } else if (scissors.checked) {
          return 'Scissors'
       }
-      
    }
 
-   let playerChoice = pChoice();
-   console.log(playerChoice);
+   let playerChoice = pChoice(); // so that function will be called once only and then stored in a variable
+   console.log(playerChoice); // debug
 
-   let dice = Math.floor(Math.random() * 3);
-   let robotChoice = robot[dice];
+   let dice = Math.floor(Math.random() * 3); // gives a number between 0 & 2, to choose from the array containing robot's moves
+   let robotChoice = robot[dice]; // robot has picked his move
 
    alert(`your oponent chooses ${robotChoice} ! You have picked ${playerChoice}...`);
 
